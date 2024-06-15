@@ -2,6 +2,7 @@ import express from "express";
 import "dotenv/config";
 import { engine } from "express-handlebars";
 import fileUpload from "express-fileupload";
+import resumeRoutes from "./routes/resume.route.js";
 // import session from "express-session";
 import path from "path";
 
@@ -31,9 +32,10 @@ app.engine(".hbs", engine({ extname: ".hbs" }));
 app.set("view engine", ".hbs");
 app.set("views", "./views");
 
-app.use("/", (req, res) => {
-  res.status(200).render("index");
-});
+// app.use("/", (req, res) => {
+//   res.status(200).render("index");
+// });
+app.use("/", resumeRoutes);
 
 app.get("*", (req, res) => {
   res.status(404).render("error");

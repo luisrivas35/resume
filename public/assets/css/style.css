@@ -11,6 +11,29 @@
 }
  */
 
-#index {
-     background-image: url('/assets/imgs/jpg/container1.jpg');
-}
+.carousel-item img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            height: 100%;
+            filter: opacity(0.3);
+        }
+
+        .carousel-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+        }
+
+        .carousel-caption {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            text-align: center;
+        }
