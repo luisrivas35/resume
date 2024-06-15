@@ -27,8 +27,13 @@ app.set("views", "./views");
 
 app.use("/", resumeRoutes);
 
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(err.status || 500).render("error", { errorMessage: err.message });
+});
+
 app.get("*", (req, res) => {
-  res.status(404).render("error");
+  res.status(404).render("error_main");
 });
 
 const PORT = process.env.PORT || 3000;

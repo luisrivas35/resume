@@ -1,39 +1,77 @@
-/* body {
-    /* Set background image */
-    background-image: url('/assets/imgs/jpg/devops.jpg');
-    /* Center and cover the background */
-    background-position: center;
-    background-size: cover;
-    /* Fix background image */
-    background-attachment: fixed;
-    /* Add opacity to the background */
-    background-color: rgba(255, 255, 255, 0.7) 
+.header-section {
+  background: url("/assets/imgs/jpg/devops.jpg") no-repeat center center;
+  background-size: cover;
+  color: white;
+  min-height: 65vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 20px;
 }
- */
 
-.carousel-item img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            min-width: 100%;
-            height: 100%;
-            filter: opacity(0.3);
-        }
+.header-section .container {
+  max-width: 1200px;
+  margin: 0;
+}
 
-        .carousel-item::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-        }
+.header-section h2,
+.header-section h4 {
+  margin: 0;
+}
 
-        .carousel-caption {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            color: white;
-            text-align: center;
-        }
+.text-start {
+  text-align: left;
+}
+
+.custom-footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.error-page {
+  background: url("/assets/imgs/jpg/error-404.jpg") no-repeat center center;
+  background-size: cover;
+  color: white;
+  min-height: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  text-align: center;
+}
+
+.error-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.error-content {
+  position: relative;
+  z-index: 1;
+}
+
+.error-code {
+  font-size: 10rem;
+  font-weight: bold;
+}
+
+.error-message {
+  font-size: 1.5rem;
+}
+
+.error-description {
+  margin: 20px 0;
+  font-size: 1.25rem;
+}
+
+.btn-home {
+  font-size: 1rem;
+  padding: 10px 20px;
+}
