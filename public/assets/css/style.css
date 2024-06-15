@@ -1,0 +1,16 @@
+/* body {
+    /* Set background image */
+    background-image: url('/assets/imgs/jpg/devops.jpg');
+    /* Center and cover the background */
+    background-position: center;
+    background-size: cover;
+    /* Fix background image */
+    background-attachment: fixed;
+    /* Add opacity to the background */
+    background-color: rgba(255, 255, 255, 0.7) 
+}
+ */
+
+#index {
+     background-image: url('/assets/imgs/jpg/container1.jpg');
+}
