@@ -31,3 +31,11 @@ export const getEducation = async (req, res) => {
   }
 };
 
+export const getTechs = async (req, res) => {
+  try {
+    res.render("techs");
+  } catch (err) {
+    res.status(500).render("error", { err });
+  }
+};
+
